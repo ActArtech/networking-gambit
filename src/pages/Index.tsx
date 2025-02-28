@@ -1,11 +1,11 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import ProfileCard from "src/components/ProfileCard";
-import FeatureCard from "src/components/FeatureCard";
-import Hero from "src/components/Hero";
-import Navbar from "src/components/Navbar";
-import Footer from "src/components/Footer";
+import ProfileCard from "@/components/ProfileCard";
+import FeatureCard from "@/components/FeatureCard";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
 const Index = () => {
