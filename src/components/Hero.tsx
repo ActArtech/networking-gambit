@@ -1,6 +1,7 @@
 
+
 import { motion } from "framer-motion";
-import { Button } from "src/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {

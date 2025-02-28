@@ -1,6 +1,7 @@
 
+
 import { useState, useEffect } from "react";
-import { Button } from "src/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight } from "lucide-react";
 
@@ -64,7 +65,9 @@ const Navbar = () => {
           <Button variant="ghost" className="mr-3 text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100">
             Log in
           </Button>
-          <Button className="bg-neutral-900 hover:bg-neutral-800 text-white">Get Started</Button>
+          <Button className="bg-neutral-900 hover:bg-neutral-800 text-white">
+            Get Started
+          </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
