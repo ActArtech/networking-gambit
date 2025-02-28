@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Button } from "src/components/ui/button";
+import { Button } from "@/components/ui/button";
 import ProfileCard from "src/components/ProfileCard";
 import FeatureCard from "src/components/FeatureCard";
 import Hero from "src/components/Hero";
@@ -76,28 +76,28 @@ const Index = () => {
               <FeatureCard 
                 title="High-Stakes Mode" 
                 description="Premium feature revealing only the top 3 most relevant people at events"
-                iconName="zap"
+                iconName="Zap"
               />
             </motion.div>
             <motion.div variants={item}>
               <FeatureCard 
                 title="Project Cards" 
                 description="Create cards for projects or opportunities with goals, needs, and keywords"
-                iconName="layout-grid"
+                iconName="LayoutGrid"
               />
             </motion.div>
             <motion.div variants={item}>
               <FeatureCard 
                 title="Collaboration Board" 
                 description="Unlock a shared workspace when users mutually reveal project cards"
-                iconName="users"
+                iconName="Users"
               />
             </motion.div>
             <motion.div variants={item}>
               <FeatureCard 
                 title="Bluffing Mechanism" 
                 description="Signal expertise while keeping specific details hidden to create intrigue"
-                iconName="eye-off"
+                iconName="EyeOff"
               />
             </motion.div>
           </motion.div>
@@ -133,21 +133,21 @@ const Index = () => {
               <ProfileCard 
                 title="Investors" 
                 description="Efficient deal flow, streamlined due diligence, and access to a curated network of experts"
-                iconName="briefcase"
+                iconName="Briefcase"
               />
             </motion.div>
             <motion.div variants={item}>
               <ProfileCard 
                 title="Founders" 
                 description="Targeted exposure, collaboration opportunities, and a platform to showcase projects"
-                iconName="rocket"
+                iconName="Rocket"
               />
             </motion.div>
             <motion.div variants={item}>
               <ProfileCard 
                 title="Experts" 
                 description="Marketplace to offer fractional services, build reputation, and connect with clients"
-                iconName="brain"
+                iconName="Brain"
               />
             </motion.div>
           </motion.div>

@@ -9,7 +9,7 @@ interface ProfileCardProps {
 }
 
 const ProfileCard = ({ title, description, iconName }: ProfileCardProps) => {
-  const Icon = LucideIcons[iconName];
+  const LucideIcon = LucideIcons[iconName];
 
   return (
     <motion.div
@@ -18,7 +18,7 @@ const ProfileCard = ({ title, description, iconName }: ProfileCardProps) => {
     >
       <div className="flex flex-col items-center text-center">
         <div className="bg-neutral-100 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-          <Icon size={32} className="text-neutral-700" />
+          <LucideIcon size={32} className="text-neutral-700" />
         </div>
         <h3 className="text-xl font-semibold mb-3">{title}</h3>
         <p className="text-neutral-600">{description}</p>
