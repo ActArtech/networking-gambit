@@ -1,9 +1,9 @@
 
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,21 +23,34 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: "Features", href: "#features" },
-    { name: "Benefits", href: "#personas" },
-    { name: "Roadmap", href: "#roadmap" },
+    {
+      name: "Features",
+      href: "/#features"
+    },
+    {
+      name: "Benefits",
+      href: "/#personas"
+    },
+    {
+      name: "Roadmap",
+      href: "/#roadmap"
+    },
+    {
+      name: "Networking",
+      href: "/networking"
+    }
   ];
 
   const NavLinks = () => (
     <>
       {navLinks.map((link) => (
-        <a
+        <Link
           key={link.name}
-          href={link.href}
+          to={link.href}
           className="text-neutral-700 hover:text-neutral-900 transition-colors duration-200"
         >
           {link.name}
-        </a>
+        </Link>
       ))}
     </>
   );
@@ -50,19 +63,21 @@ const Navbar = () => {
     >
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
         <div className="flex items-center">
-          <a href="/" className="text-2xl font-bold text-neutral-900 flex items-center">
+          <Link to="/" className="text-2xl font-bold text-neutral-900 flex items-center">
             <span className="text-neutral-900">Poker</span>
             <span className="text-neutral-600">Face</span>
-          </a>
+          </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <NavLinks />
         </div>
 
         <div className="hidden md:flex items-center">
-          <Button variant="ghost" className="mr-3 text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100">
+          <Button
+            variant="ghost"
+            className="mr-3 text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100"
+          >
             Log in
           </Button>
           <Button className="bg-neutral-900 hover:bg-neutral-800 text-white">
@@ -80,7 +95,6 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -111,7 +125,10 @@ const Navbar = () => {
                 transition={{ duration: 0.3, delay: 0.1 }}
                 className="pt-4 space-y-3"
               >
-                <Button variant="ghost" className="w-full justify-start text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100">
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100"
+                >
                   Log in
                 </Button>
                 <Button className="w-full bg-neutral-900 hover:bg-neutral-800 text-white">

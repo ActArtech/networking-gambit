@@ -1,8 +1,8 @@
 
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -44,9 +44,11 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
-            <Button size="lg" className="bg-neutral-900 hover:bg-neutral-800 text-white rounded-full px-8">
-              Get Early Access
-            </Button>
+            <Link to="/networking">
+              <Button size="lg" className="bg-neutral-900 hover:bg-neutral-800 text-white rounded-full px-8">
+                Try Networking
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="rounded-full group border-neutral-300 hover:border-neutral-900">
               Learn More <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -100,9 +102,11 @@ const Hero = () => {
                   <Button variant="outline" size="sm" className="border-neutral-200 text-neutral-700">
                     Skip
                   </Button>
-                  <Button size="sm" className="bg-neutral-900 hover:bg-neutral-800 text-white">
-                    Request Reveal
-                  </Button>
+                  <Link to="/networking">
+                    <Button size="sm" className="bg-neutral-900 hover:bg-neutral-800 text-white">
+                      Request Reveal
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
