@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import * as LucideIcons from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
   title: string;
@@ -10,7 +11,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ title, description, iconName }: FeatureCardProps) => {
   // Get the actual icon component from LucideIcons
-  const IconComponent = LucideIcons[iconName];
+  const IconComponent = LucideIcons[iconName] as LucideIcon;
 
   return (
     <motion.div
@@ -18,7 +19,7 @@ const FeatureCard = ({ title, description, iconName }: FeatureCardProps) => {
       className="h-full bg-white rounded-2xl p-6 shadow-sm border border-neutral-200 flex flex-col transition-all duration-200 hover:shadow-md"
     >
       <div className="bg-neutral-100 w-12 h-12 flex items-center justify-center rounded-xl mb-4">
-        <IconComponent size={24} className="text-neutral-700" />
+        {IconComponent && <IconComponent size={24} className="text-neutral-700" />}
       </div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-neutral-600 text-sm flex-grow">{description}</p>

@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import * as LucideIcons from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 interface ProfileCardProps {
   title: string;
@@ -10,7 +11,7 @@ interface ProfileCardProps {
 
 const ProfileCard = ({ title, description, iconName }: ProfileCardProps) => {
   // Get the actual icon component from LucideIcons
-  const IconComponent = LucideIcons[iconName];
+  const IconComponent = LucideIcons[iconName] as LucideIcon;
 
   return (
     <motion.div
@@ -19,7 +20,7 @@ const ProfileCard = ({ title, description, iconName }: ProfileCardProps) => {
     >
       <div className="flex flex-col items-center text-center">
         <div className="bg-neutral-100 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-          <IconComponent size={32} className="text-neutral-700" />
+          {IconComponent && <IconComponent size={32} className="text-neutral-700" />}
         </div>
         <h3 className="text-xl font-semibold mb-3">{title}</h3>
         <p className="text-neutral-600">{description}</p>
